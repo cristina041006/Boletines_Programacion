@@ -1,4 +1,4 @@
-
+'''
 print ("Ejercicio1*")
 
 cadena="hola queeeee tal"
@@ -79,10 +79,10 @@ def reverseCadena (listaOriginal=[]):
 def palindrome (string):
     palindromo=False
     espacio=" "
-    newString=[]
+    newString=""
     for i in range (len(string)):
         if string[i] not in espacio:
-            newString.append(string[i])  
+            newString+= str(string[i])  
     stringReverse=reverseCadena(newString) 
     if stringReverse==newString:
         palindromo=True
@@ -94,23 +94,21 @@ print("---------------------------------------")
 
 print("Ejercicio6*")
 
-escondida="syhobaxlna"
+escondida="shyobaxlnaa "
 encontrada="hola"
 
 def palabraEscondida (palabra1, palabra2):
-    palabra=""
     contador1=0
     esta=True
     for i in range(len(palabra1)):
-        if palabra1[i] == palabra2[contador1]:
-            palabra+= str(palabra1[i])
+        if contador1<len(palabra2) and palabra1[i] == palabra2[contador1] :
             contador1+=1
-    if palabra != palabra2:
+    if contador1 != len(palabra2):
         esta=False 
     return esta
 
 print (palabraEscondida(escondida, encontrada))
-  
+''' 
 print("--------------------------")
 print("Ejercicio7")
 
@@ -119,14 +117,23 @@ palabraEncontrar="cristina"
 palabraSustituir="Maria"
 
 def sustituir (cadena1, cadena2, cadena3):
-    cambio=cadena1[cadena2]
-    if cadena2 in cadena1:
-        cadena2=cadena3
-    return cadena1 
+    contador=0
+    for i in range(len(cadena1)):
+        if cadena1[i]== cadena2[contador]:  
+            if cadena1[(i+1)]==cadena2[(contador+1)]:
+                inicio=i
+        if cadena1[i]==cadena2[-2]:
+            if cadena1[(i+1)]==cadena2[-1]:
+                fin=(i+1)
+                
+    cadena1[inicio:fin]=cadena3
+    
+    return cadena1
+                   
+        
+#print(sustituir(cadena7, palabraEncontrar, palabraSustituir))  
 
-print(sustituir(cadena7, palabraEncontrar, palabraSustituir))  
-
-
+'''
 print("-------------------------------------")
 
 print("Ejercicio8*")
@@ -174,7 +181,7 @@ def desordenar (cadena):
 print(desordenar("curso de programacion"))       
     
 print("------------------------")
-print("Ejercicio10")
+print("Ejercicio10*")
 
 def cuantasPalabras (cadena):
     espacio=" "
@@ -186,4 +193,4 @@ def cuantasPalabras (cadena):
     return palabras
 
 print(cuantasPalabras("He estudiado mucho     para el examen"))                        
-'''       
+'''
