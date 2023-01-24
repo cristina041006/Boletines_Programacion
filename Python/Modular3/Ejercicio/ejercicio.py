@@ -1,4 +1,4 @@
-'''
+
 print ("Ejercicio1*")
 
 cadena="hola queeeee tal"
@@ -108,7 +108,7 @@ def palabraEscondida (palabra1, palabra2):
     return esta
 
 print (palabraEscondida(escondida, encontrada))
-''' 
+
 print("--------------------------")
 print("Ejercicio7")
 
@@ -133,7 +133,7 @@ def sustituir (cadena1, cadena2, cadena3):
         
 #print(sustituir(cadena7, palabraEncontrar, palabraSustituir))  
 
-'''
+
 print("-------------------------------------")
 
 print("Ejercicio8*")
@@ -193,4 +193,3 @@ def cuantasPalabras (cadena):
     return palabras
 
 print(cuantasPalabras("He estudiado mucho     para el examen"))                        
-'''
